@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0A0A0A">
+    <title>Moon Création | Bijoux Érotiques de Luxe</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&family=Cinzel:wght@400;700&display=swap" as="style">
+    
+    <!-- Styles Premium -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <style>
+        :root {
+            --noir-sensuel: #0A0A0A;
+            --rose-poudré: #F3D7CA;
+            --or-pâle: #E6C8A1;
+            --bordeaux-passion: #8C2F4A;
+            --ivoire: #FFF8F0;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--ivoire);
+            color: var(--noir-sensuel);
+            overflow-x: hidden;
+            padding-top: 120px; /* Compensation pour la navbar fixe */
+        }
+        
+        /* Navigation Principale - Améliorée */
+        .navbar-moon {
+            background: rgba(10,10,10,0.98) !important;
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(230, 200, 161, 0.3);
+            padding: 0.8rem 0;
+            transition: var(--transition-smooth);
+        }
+        
+        .navbar-moon.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 20px rgba(10,10,10,0.2);
+        }
+        
+        .nav-link-moon {
+            color: var(--rose-poudré) !important;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+            position: relative;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem !important;
+        }
+        
+        .nav-link-moon:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: var(--or-pâle);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link-moon:hover:after,
+        .nav-link-moon:focus-visible:after {
+            width: 70%;
+        }
+        
+        /* Menu Catégories - Version Mobile First */
+        .categories-nav {
+            background: var(--noir-sensuel);
+            border-top: 1px solid rgba(230, 200, 161, 0.2);
+            border-bottom: 1px solid rgba(230, 200, 161, 0.2);
+            position: relative;
+        }
+        
+        .categories-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--rose-poudré);
+            width: 100%;
+            padding: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .categories-toggle:hover {
+            color: var(--or-pâle);
+        }
+        
+        .categories-toggle i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .categories-toggle.active i {
+            transform: rotate(180deg);
+        }
+        
+        .categories-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0.8rem 0;
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .category-link {
+            color: var(--rose-poudré) !important;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            margin: 0.5rem 1rem;
+            padding: 0.5rem 0;
+            transition: var(--transition-smooth);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .category-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--or-pâle);
+            transition: width 0.3s ease;
+        }
+        
+        .category-link:hover,
+        .category-link:focus-visible {
+            color: var(--or-pâle) !important;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        
+        .category-link:hover:after,
+        .category-link:focus-visible:after {
+            width: 100%;
+        }
+        
+        /* Hero Slider - Optimisé Mobile */
+        .hero-slider {
+            height: 70vh;
+            min-height: 500px;
+            width: 100%;
+        }
+        
+        .hero-slide {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-content {
+            background: rgba(10,10,10,0.7);
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            border-left: 3px solid var(--bordeaux-passion);
+            margin: 0 1rem;
+        }
+        
+        .hero-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+        }
+        
+        /* Sections Produits - Amélioré Mobile */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--noir-sensuel);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: var(--bordeaux-passion);
+        }
+        
+        .product-card {
+            background: white;
+            border: none;
+            transition: var(--transition-smooth);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(140, 47, 74, 0.15);
+        }
+        
+        .product-img-container {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            overflow: hidden;
+            background: #f9f9f9;
+        }
+        
+        .product-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--bordeaux-passion);
+            color: white;
+            padding: 5px 12px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            z-index: 2;
+            border-radius: 20px;
+        }
+        
+        .quick-view-btn {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background: rgba(10,10,10,0.9);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-smooth);
+            opacity: 0;
+            z-index: 3;
+        }
+        
+        .product-card:hover .quick-view-btn {
+            bottom: 0;
+            opacity: 1;
+        }
+        
+        /* Quick View Modal */
+        .quick-view-modal .modal-content {
+            border-radius: 0;
+            border: none;
+        }
+        
+        .quick-view-modal .modal-header {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .quick-view-modal .modal-body {
+            padding: 2rem;
+        }
+        
+        /* Variant Selector */
+        .variant-selector {
+            display: flex;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        
+        .variant-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+        
+        .variant-option:hover {
+            transform: scale(1.1);
+        }
+        
+        .variant-option.selected {
+            border-color: var(--bordeaux-passion);
+            transform: scale(1.1);
+        }
+        
+        /* Floating Cart */
+        .floating-cart {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--noir-sensuel);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 99;
+            transition: var(--transition-smooth);
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .floating-cart.visible {
+            opacity: 1;
+            visibility: visible;
+            bottom: 30px;
+        }
+        
+        .floating-cart-count {
+            background: var(--bordeaux-passion);
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            margin-left: 8px;
+        }
+        
+        /* Add to Cart Animation */
+        @keyframes cartBounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        .cart-animation {
+            animation: cartBounce 1s ease;
+        }
+        
+        /* Skeleton Loading */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 4px;
+        }
+        
+        @keyframes shimmer {
+            0% {background-position: 200% 0;}
+            100% {background-position: -200% 0;}
+        }
+        
+        /* Footer - Optimisé Mobile */
+        .footer-moon {
+            background: var(--noir-sensuel);
+            color: var(--rose-poudré);
+            padding: 3rem 0 1.5rem;
+            border-top: 1px solid var(--or-pâle);
+        }
+        
+        .footer-title {
+            font-family: 'Cinzel', serif;
+            color: var(--or-pâle);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+        
+        .footer-link {
+            color: var(--rose-poudré);
+            display: block;
+            margin-bottom: 0.7rem;
+            transition: var(--transition-smooth);
+            padding: 0.2rem 0;
+        }
+        
+        .footer-link:hover,
+        .footer-link:focus-visible {
+            color: var(--or-pâle);
+            transform: translateX(5px);
+            text-decoration: none;
+        }
+        
+        /* WhatsApp Float - Amélioré */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            transform: scale(1);
+        }
+        
+        .whatsapp-float:hover,
+        .whatsapp-float:focus-visible {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Touch Targets */
+        button, a, [role="button"] {
+            min-width: 48px;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Responsive - Breakpoints Optimisés */
+        @media (max-width: 1199.98px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            body {
+                padding-top: 90px;
+            }
+            
+            .navbar-brand span {
+                font-size: 1.8rem !important;
+            }
+            
+            .hero-slider {
+                height: 60vh;
+                min-height: 400px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-text {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .categories-toggle {
+                display: block;
+            }
+            
+            .categories-menu {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+            }
+            
+            .categories-menu.show {
+                max-height: 500px;
+                padding: 1rem 0;
+            }
+            
+            .category-link {
+                margin: 0.3rem 0;
+                font-size: 0.95rem;
+            }
+            
+            .hero-slider {
+                height: 50vh;
+                min-height: 350px;
+            }
+            
+            .hero-content {
+                padding: 1.5rem;
+                margin: 0.5rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .footer-moon {
+                padding: 2rem 0 1rem;
+            }
+            
+            .footer-col {
+                margin-bottom: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            body {
+                padding-top: 80px;
+            }
+            
+            .hero-slider {
+                height: 45vh;
+                min-height: 300px;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .hero-text {
+                font-size: 0.95rem;
+            }
+            
+            .product-card {
+                margin-bottom: 1rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #f0f0f0;
+            }
+            
+            .product-card {
+                background: #1e1e1e;
+                color: #f0f0f0;
+            }
+            
+            .product-img-container {
+                background: #2a2a2a;
+            }
+            
+            .text-muted {
+                color: #aaa !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Principale -->
+    <nav class="navbar navbar-expand-lg navbar-moon fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--rose-poudré);">Moon Création</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link nav-link-moon active" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-moon" href="boutique.html">Boutique</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-moon" href="panier.html">Panier</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-moon" href="commander.html">Commander</a></li>
+                    <li class="nav-item"><a class="nav-link nav-link-moon" href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="d-flex">
+                    <button class="btn nav-link nav-link-moon me-3 search-btn" aria-label="Recherche"><i class="fas fa-search"></i></button>
+                    <a href="panier.html" class="nav-link nav-link-moon position-relative cart-btn" aria-label="Panier">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle cart-count" style="background: var(--bordeaux-passion); font-size: 0.6rem; padding: 3px 5px;">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Menu Catégories - Version Mobile Optimisée -->
+    <div class="categories-nav">
+        <button class="categories-toggle" id="categoriesToggle">
+            Explorer nos collections <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="container">
+            <div class="categories-menu" id="categoriesMenu">
+                <a href="#" class="category-link">Baiser de Nacre</a>
+                <a href="#" class="category-link">Ombre Dorée</a>
+                <a href="#" class="category-link">Péché de Hanche</a>
+                <a href="#" class="category-link">Étreinte Lunaire</a>
+                <a href="#" class="category-link">Silk & Désir</a>
+                <a href="#" class="category-link">Rouge Hanche</a>
+                <a href="#" class="category-link">Satin Sauvage</a>
+                <a href="#" class="category-link">L'Effleureuse</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hero Slider avec Lazy Loading -->
+    <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide hero-slide">
+                <picture>
+                    <source srcset="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80 2x" media="(max-width: 768px)">
+                    <source srcset="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" media="(min-width: 769px)">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Collection Étreinte Lunaire" class="d-block w-100 h-100" loading="lazy" style="object-fit: cover;">
+                </picture>
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content text-white">
+                        <h2 class="hero-title" style="font-family: 'Playfair Display', serif;">Collection Étreinte Lunaire</h2>
+                        <p class="hero-text mb-4">Des perles qui épousent vos courbes comme un clair de lune caresse la peau</p>
+                        <a href="#" class="btn btn-outline-light px-4 py-2">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="swiper-slide hero-slide">
+                <picture>
+                    <source srcset="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80 1x, https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80 2x" media="(max-width: 768px)">
+                    <source srcset="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80" media="(min-width: 769px)">
+                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Nouvelle Collection" class="d-block w-100 h-100" loading="lazy" style="object-fit: cover;">
+                </picture>
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content text-white">
+                        <h2 class="hero-title" style="font-family: 'Playfair Display', serif;">Nouvelle Collection</h2>
+                        <p class="hero-text mb-4">Découvrez nos créations exclusives pour cet été</p>
+                        <a href="#" class="btn btn-outline-light px-4 py-2">Voir maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- Section En Vedette -->
+    <section class="py-5">
+        <div class="container py-4">
+            <h3 class="section-title">En Vedette</h3>
+            
+            <div class="row">
+                <!-- Produit 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <picture>
+                                <source srcset="https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80 1x, https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80 2x" media="(max-width: 768px)">
+                                <img src="https://images.unsplash.com/photo-1611591437281-4608be122683?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="product-img" alt="Baiser de Nacre" loading="lazy">
+                            </picture>
+                            <div class="product-badge">NOUVEAU</div>
+                            <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-product="1">Voir rapidement</button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Baiser de Nacre</h5>
+                            <p class="text-muted small">Perles blanches iridescentes</p>
+                            <p class="h5" style="color: var(--bordeaux-passion);">28 000 FCFA</p>
+                            <button class="btn btn-sm btn-outline-dark mt-2 add-to-cart" data-product-id="1">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 2 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <picture>
+                                <source srcset="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80 1x, https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80 2x" media="(max-width: 768px)">
+                                <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="product-img" alt="Péché de Hanche" loading="lazy">
+                            </picture>
+                            <div class="product-badge">BEST-SELLER</div>
+                            <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-product="2">Voir rapidement</button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Péché de Hanche</h5>
+                            <p class="text-muted small">Perles rouges profondes</p>
+                            <p class="h5" style="color: var(--bordeaux-passion);">32 000 FCFA</p>
+                            <button class="btn btn-sm btn-outline-dark mt-2 add-to-cart" data-product-id="2">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 3 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <picture>
+                                <source srcset="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80 1x, https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80 2x" media="(max-width: 768px)">
+                                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="product-img" alt="Étreinte Lunaire" loading="lazy">
+                            </picture>
+                            <div class="product-badge">LIMITÉ</div>
+                            <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-product="3">Voir rapidement</button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Étreinte Lunaire</h5>
+                            <p class="text-muted small">Perles noires mystérieuses</p>
+                            <p class="h5" style="color: var(--bordeaux-passion);">35 000 FCFA</p>
+                            <button class="btn btn-sm btn-outline-dark mt-2 add-to-cart" data-product-id="3">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Produit 4 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-img-container">
+                            <picture>
+                                <source srcset="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80 1x, https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80 2x" media="(max-width: 768px)">
+                                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="product-img" alt="Silk & Désir" loading="lazy">
+                            </picture>
+                            <div class="product-badge">EXCLUSIF</div>
+                            <button class="quick-view-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" data-product="4">Voir rapidement</button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title" style="font-family: 'Playfair Display', serif;">Silk & Désir</h5>
+                            <p class="text-muted small">Soie et perles entrelacées</p>
+                            <p class="h5" style="color: var(--bordeaux-passion);">38 000 FCFA</p>
+                            <button class="btn btn-sm btn-outline-dark mt-2 add-to-cart" data-product-id="4">Ajouter au panier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quick View Modal -->
+    <div class="modal fade quick-view-modal" id="quickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewTitle">Détails du produit</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-img-container mb-4">
+                                <img id="quickViewImage" src="" class="product-img" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="quickViewProductName" style="font-family: 'Playfair Display', serif;"></h3>
+                            <p id="quickViewPrice" class="h4 my-3" style="color: var(--bordeaux-passion);"></p>
+                            <p id="quickViewDescription" class="mb-4"></p>
+                            
+                            <div class="mb-4">
+                                <h6 class="mb-3">Couleurs disponibles</h6>
+                                <div class="variant-selector">
+                                    <div class="variant-option selected" style="background: #F3D7CA;" data-color="Rose Poudré"></div>
+                                    <div class="variant-option" style="background: #8C2F4A;" data-color="Bordeaux"></div>
+                                    <div class="variant-option" style="background: #0A0A0A;" data-color="Noir"></div>
+                                    <div class="variant-option" style="background: #E6C8A1;" data-color="Or Pale"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="me-3">
+                                    <label for="quantity" class="form-label">Quantité</label>
+                                    <input type="number" id="quantity" class="form-control" value="1" min="1" style="width: 80px;">
+                                </div>
+                                <button class="btn btn-dark px-4 py-2 mt-3 add-to-cart" id="modalAddToCart">Ajouter au panier</button>
+                            </div>
+                            
+                            <div class="accordion" id="productAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            Description détaillée
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                        <div class="accordion-body" id="quickViewDetails">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            Livraison & Retours
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#productAccordion">
+                                        <div class="accordion-body">
+                                            Livraison standard offerte à partir de 50 000 FCFA. Retours acceptés sous 14 jours.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Cart -->
+    <a href="panier.html" class="floating-cart" id="floatingCart">
+        <span>Voir le panier</span>
+        <span class="floating-cart-count">0</span>
+    </a>
+    
+    <!-- Footer -->
+    <footer class="footer-moon">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 footer-col">
+                    <h4 class="footer-title">Moon Création</h4>
+                    <p>Bijoux érotiques de luxe pour célébrer la féminité et la sensualité.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="text-white" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 footer-col">
+                    <h4 class="footer-title">Boutique</h4>
+                    <a href="#" class="footer-link">Perles de Hanche</a>
+                    <a href="#" class="footer-link">Chevillères</a>
+                    <a href="#" class="footer-link">Nouveautés</a>
+                    <a href="#" class="footer-link">Promotions</a>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 footer-col">
+                    <h4 class="footer-title">Informations</h4>
+                    <a href="#" class="footer-link">Livraison</a>
+                    <a href="#" class="footer-link">Paiement</a>
+                    <a href="#" class="footer-link">Retours</a>
+                    <a href="#" class="footer-link">FAQ</a>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 footer-col">
+                    <h4 class="footer-title">Légal</h4>
+                    <a href="#" class="footer-link">CGV</a>
+                    <a href="#" class="footer-link">CGU</a>
+                    <a href="#" class="footer-link">Mentions légales</a>
+                    <a href="#" class="footer-link">Confidentialité</a>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <a href="mailto:contact@mooncreation.com" class="footer-link">contact@mooncreation.com</a>
+                    <a href="tel:+22901000000" class="footer-link">+229 01 00 00 00</a>
+                    <a href="#" class="footer-link">Service client</a>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4 mt-4 border-top" style="border-color: rgba(230, 200, 161, 0.2) !important;">
+                <p class="small text-muted">© 2023 Moon Création by Vantablack. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/22901000000" class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Hero Slider
+        const heroSlider = new Swiper('.hero-slider', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            preloadImages: false,
+            lazy: {
+                loadPrevNext: true,
+            },
+        });
+        
+        // Categories Menu Toggle - Mobile
+        const categoriesToggle = document.getElementById('categoriesToggle');
+        const categoriesMenu = document.getElementById('categoriesMenu');
+        
+        if (categoriesToggle && categoriesMenu) {
+            categoriesToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                categoriesMenu.classList.toggle('show');
+            });
+        }
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar-moon');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Quick View Modal
+        const quickViewModal = document.getElementById('quickViewModal');
+        if (quickViewModal) {
+            quickViewModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const productId = button.getAttribute('data-product');
+                const productCard = button.closest('.product-card');
+                
+                // Récupérer les infos du produit
+                const productName = productCard.querySelector('.card-title').textContent;
+                const productPrice = productCard.querySelector('.h5').textContent;
+                const productImage = productCard.querySelector('.product-img').src;
+                const productDesc = productCard.querySelector('.text-muted').textContent;
+                
+                // Mettre à jour le modal
+                document.getElementById('quickViewTitle').textContent = productName;
+                document.getElementById('quickViewProductName').textContent = productName;
+                document.getElementById('quickViewPrice').textContent = productPrice;
+                document.getElementById('quickViewImage').src = productImage;
+                document.getElementById('quickViewImage').alt = productName;
+                document.getElementById('quickViewDescription').textContent = productDesc;
+                document.getElementById('modalAddToCart').setAttribute('data-product-id', productId);
+                
+                // Description détaillée (simulée)
+                const details = `Ce bijou sensuel fait partie de notre collection premium. Fabriqué à la main avec des perles de qualité supérieure et des matériaux luxueux, il est conçu pour mettre en valeur vos courbes avec élégance.`;
+                document.getElementById('quickViewDetails').textContent = details;
+            });
+        }
+        
+        // Variant Selection
+        const variantOptions = document.querySelectorAll('.variant-option');
+        variantOptions.forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelector('.variant-option.selected').classList.remove('selected');
+                this.classList.add('selected');
+            });
+        });
+        
+        // Cart Functionality
+        let cartCount = 0;
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartCountElements = document.querySelectorAll('.cart-count, .floating-cart-count');
+        const floatingCart = document.getElementById('floatingCart');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product-id');
+                
+                // Animation
+                this.innerHTML = '<i class="fas fa-check"></i> Ajouté';
+                this.classList.add('btn-success');
+                this.classList.remove('btn-outline-dark');
+                
+                // Réinitialiser après 2 secondes
+                setTimeout(() => {
+                    this.innerHTML = 'Ajouter au panier';
+                    this.classList.remove('btn-success');
+                    this.classList.add('btn-outline-dark');
+                }, 2000);
+                
+                // Mettre à jour le panier
+                cartCount++;
+                updateCartCount();
+                
+                // Afficher le floating cart
+                showFloatingCart();
+                
+                // Ici, vous pourriez ajouter la logique pour stocker le produit dans le panier
+                // localStorage.setItem('cart', JSON.stringify(cartItems));
+            });
+        });
+        
+        function updateCartCount() {
+            cartCountElements.forEach(element => {
+                element.textContent = cartCount;
+            });
+        }
+        
+        function showFloatingCart() {
+            floatingCart.classList.add('visible');
+            
+            // Cacher après 5 secondes
+            setTimeout(() => {
+                floatingCart.classList.remove('visible');
+            }, 5000);
+        }
+        
+        // Lazy Loading pour les images hors viewport
+        if ('loading' in HTMLImageElement.prototype) {
+            // Le navigateur supporte le lazy loading natif
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback avec Intersection Observer
+            const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                lazyLoadObserver.observe(img);
+            });
+        }
+        
+        // Touch device detection
+        function isTouchDevice() {
+            return 'ontouchstart' in window || navigator.maxTouchPoints;
+        }
+        
+        if (isTouchDevice()) {
+            document.body.classList.add('touch-device');
+            
+            // Améliorations spécifiques aux appareils tactiles
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.style.transition = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
